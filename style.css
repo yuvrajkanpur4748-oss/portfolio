@@ -167,11 +167,30 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Home Section Styling */
 .home-section {
+    position: relative;
     background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.05), transparent),
                 radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.05), transparent);
+    overflow: hidden;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('.vscode/assets/img1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15; /* Transparent effect */
+    z-index: 0;
 }
 
 .intro-box {
+    position: relative;
+    z-index: 1;
     text-align: center;
 }
 
